@@ -3,9 +3,10 @@ import {Link} from 'react-router-dom'
 function Confirmation() {
 
     const message = "Succesfully Registered waa ka!"
+    let confirm = alert(message)
     return(
         <div>
-            <p>{message}</p>
+            <p>{confirm}</p>
             <Link to="/">Home</Link>
         </div>
     )

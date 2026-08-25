@@ -20,6 +20,7 @@ function Events() {
 
   return (
     <div>
+      <h3>Here are the events for today's vlog</h3>
       <ul>
         <li>
           <Link to={`/events/${events[0].id}`}>

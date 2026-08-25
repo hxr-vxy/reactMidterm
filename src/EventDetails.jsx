@@ -1,22 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const events = [
-  {
-    id: 1,
-    event: "Foundation Day",
-  },
-  {
-    id: 2,
-    event: "Cast Day",
-  },
-  {
-    id: 3,
-    event: "Intramurals",
-  },
-];
+// const events = [
+//   {
+//     id:1
+//   }, 
+//   {
+//     id:2
+//   },
+//   {
+//     id:3
+//   }
+// ]
 
 function Foundation() {
-
   return (
     <div>
       <h1>Foundation Day</h1>
@@ -26,7 +22,6 @@ function Foundation() {
 }
 
 function Cast() {
-
   return (
     <div>
       <h1>Cast Day</h1>
@@ -36,7 +31,6 @@ function Cast() {
 }
 
 function Intrams() {
-
   return (
     <div>
       <h1>Intramurals</h1>
@@ -46,16 +40,17 @@ function Intrams() {
 }
 
 function EventDetails() {
+  const { id } = useParams();
+
   let eventDetails;
 
-  if (events[0].id === 1) {
+  if (id === "1") {
     eventDetails = <Foundation />;
-  } else if (events[1].id === 2) {
+  } else if (id === "2") {
     eventDetails = <Cast />;
-  } else if (events[2].id === 3) {
+  } else if (id === "3") {
     eventDetails = <Intrams />;
   }
-
 
   return (
     <div>
